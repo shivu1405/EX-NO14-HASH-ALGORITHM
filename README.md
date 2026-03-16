@@ -27,9 +27,34 @@ To implement HASH ALGORITHM
 
 
 ## Program:
+```
+#include <stdio.h>
+#include <string.h>
 
+int main()
+{
+    char message[100];
+    int i, sum = 0;
+
+    printf("Enter the message: ");
+    scanf("%s", message);
+
+    // Simple hash calculation
+    for(i = 0; i < strlen(message); i++)
+    {
+        sum = sum + message[i];
+    }
+
+    int hash = sum % 1000;
+
+    printf("\nHash Value: %d\n", hash);
+
+    return 0;
+}
+```
 
 ## Output:
+![Hash Algorithm Output](https://raw.githubusercontent.com/shivu1405/EX-NO14-HASH-ALGORITHM/670f247e256da61e92d442b6a50844793b3c92a2/Screenshot%202026-03-16%20091954.png)
 
 ## Result:
 The program is executed successfully.
